@@ -2,7 +2,7 @@
 builder = "DOCKERFILE"
 
 [deploy]
-startCommand = "gunicorn --timeout 300 --workers 2 -b 0.0.0.0:$PORT main:app"
+startCommand = "gunicorn --timeout 300 --workers 2 -b 0.0.0.0:${PORT:-8000} main:app"
 healthcheckPath = "/"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
