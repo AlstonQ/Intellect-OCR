@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from aadhaar import extract_aadhaar
@@ -35,7 +35,7 @@ def health_check():
 
 
 @app.api_route("/extract", methods=["GET", "POST"], response_model=AadhaarResponse)
-def extract():
+def extract(request: Request):
     """
     Extracts Aadhaar details from the hardcoded PDF and returns structured data.
     """
