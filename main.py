@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from services.aadhaar import extract_aadhaar
+from aadhaar import extract_aadhaar
 import uvicorn
 import os
 
