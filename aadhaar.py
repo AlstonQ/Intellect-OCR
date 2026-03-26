@@ -18,7 +18,7 @@ USERNAME      = os.environ.get("API_USERNAME", "idxpdemo.demo.user")
 PASSWORD      = os.environ.get("API_PASSWORD", "Chief@admin2025")
 TENANT        = os.environ.get("TENANT", "idxpdemo")
 POLL_INTERVAL = int(os.environ.get("POLL_INTERVAL", 3))
-MAX_RETRIES   = int(os.environ.get("MAX_RETRIES", 20))
+MAX_RETRIES   = int(os.environ.get("MAX_RETRIES", 60))
 
 
 # ─────────────────────────────────────────

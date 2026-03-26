@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "main.py"]
+CMD ["gunicorn", "--timeout", "300", "--workers", "2", "-b", "0.0.0.0:8000", "main:app"]
