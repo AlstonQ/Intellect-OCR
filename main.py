@@ -34,7 +34,7 @@ def health_check():
     return {"status": "ok", "message": "Aadhaar Extraction API is running."}
 
 
-@app.post("/extract", response_model=AadhaarResponse)
+@app.api_route("/extract", methods=["GET", "POST"], response_model=AadhaarResponse)
 def extract():
     """
     Extracts Aadhaar details from the hardcoded PDF and returns structured data.
