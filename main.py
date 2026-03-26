@@ -14,7 +14,7 @@ def health_check():
     return jsonify({"status": "ok", "message": "Aadhaar Extraction API is running."})
 
 
-@app.route("/extract", methods=["GET", "POST"])
+@app.route("/extract", methods=["GET", "POST"], strict_slashes=False)
 def extract():
     """
     Extracts Aadhaar details from the hardcoded PDF and returns structured data.
