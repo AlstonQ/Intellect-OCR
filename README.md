@@ -1,3 +1,5 @@
+# Test
+
 # Aadhaar Extraction API
 
 A FastAPI service that extracts structured data from Aadhaar PDFs using the IntellectSee MagicPlatform.
